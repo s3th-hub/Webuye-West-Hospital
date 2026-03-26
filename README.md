@@ -27,8 +27,7 @@ This project focuses on delivering a clean and user-friendly interface for a hos
 - Customized WordPress components and layouts
 - Ensured usability and accessibility of hospital services
 
-## 📸 Screenshots
-(Add screenshots here — homepage, services page, etc.)
+
 
 ## 📌 Project Type
 Client / Real-world project
