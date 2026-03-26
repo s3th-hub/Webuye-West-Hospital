@@ -1,0 +1,41 @@
+.pxl--progressbar {
+    @include transition(width 1.4s ease);
+    width: 0;
+}
+.pxl-progressbar-1 {
+
+    .pxl--progressbar {
+        height: 14px;
+        position: relative;
+        background-color: $primary_color;
+        @include border-radius(3px);
+    }
+    .pxl--holder {
+        background-color: #f4f4f4;
+        @include border-radius(3px);
+        height: 14px;
+    }
+    .pxl--percentage {
+        font-size: 15px;
+        font-weight: 500;
+        color: #382c4d;
+        @extend .ft-theme-default;
+    }
+    .pxl--title {
+        font-weight: 500;
+        font-size: 16px;
+        color: #382c4d;
+        flex-grow: 1;
+        margin-right: 20px;
+        margin-bottom: 0;
+    }
+    .pxl--meta {
+        margin-bottom: 7px;
+    }
+    .pxl--item {
+        + .pxl--item {
+            margin-top: 28px;
+        }
+    }
+}
+

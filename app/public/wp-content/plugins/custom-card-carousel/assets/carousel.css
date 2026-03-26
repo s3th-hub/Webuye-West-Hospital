@@ -1,0 +1,291 @@
+/* ================================================================
+   Custom Card Carousel Pro — carousel.css
+   Every visual property is driven by CSS custom properties so
+   Elementor can override them per-widget via inline <style>.
+   ================================================================ */
+
+/* ── Base reset scoped to widget ── */
+.ccc-wrap {
+  /* ── Carousel layout ── */
+  --ccc-gap:            24px;
+  --ccc-padding-top:    40px;
+  --ccc-padding-bottom: 60px;
+
+  /* ── Card ── */
+  --ccc-card-bg:        #ffffff;
+  --ccc-card-border:    1px solid #e8e8f0;
+  --ccc-card-radius:    12px;
+  --ccc-card-shadow:    0 4px 20px rgba(0,0,0,.08);
+  --ccc-card-shadow-hover: 0 12px 32px rgba(0,0,0,.15);
+  --ccc-card-padding:   24px;
+
+  /* ── Image ── */
+  --ccc-img-ratio:      56.25%;   /* 16:9 = 56.25 | 4:3 = 75 | square = 100 */
+  --ccc-img-radius:     12px 12px 0 0;
+
+  /* ── Badge ── */
+  --ccc-badge-bg:       #1a3a5c;
+  --ccc-badge-color:    #ffffff;
+  --ccc-badge-radius:   4px;
+  --ccc-badge-font-size:11px;
+
+  /* ── Title ── */
+  --ccc-title-color:    #1a1a2e;
+  --ccc-title-size:     20px;
+  --ccc-title-weight:   700;
+  --ccc-title-font:     inherit;
+  --ccc-title-line-height: 1.3;
+  --ccc-title-margin-bottom: 10px;
+
+  /* ── Description ── */
+  --ccc-desc-color:     #555570;
+  --ccc-desc-size:      14px;
+  --ccc-desc-line-height: 1.7;
+  --ccc-desc-font:      inherit;
+  --ccc-desc-margin-bottom: 20px;
+
+  /* ── Button ── */
+  --ccc-btn-bg:           #1a3a5c;
+  --ccc-btn-color:        #ffffff;
+  --ccc-btn-bg-hover:     #0f2440;
+  --ccc-btn-color-hover:  #ffffff;
+  --ccc-btn-border:       2px solid #1a3a5c;
+  --ccc-btn-border-hover: 2px solid #0f2440;
+  --ccc-btn-radius:       6px;
+  --ccc-btn-padding:      10px 22px;
+  --ccc-btn-font-size:    14px;
+  --ccc-btn-font-weight:  600;
+  --ccc-btn-font:         inherit;
+  --ccc-btn-letter-spacing: 0.02em;
+
+  /* ── Nav arrows ── */
+  --ccc-arrow-size:       42px;
+  --ccc-arrow-bg:         #ffffff;
+  --ccc-arrow-bg-hover:   #1a3a5c;
+  --ccc-arrow-color:      #1a1a2e;
+  --ccc-arrow-color-hover:#ffffff;
+  --ccc-arrow-border:     1.5px solid #e0e0ee;
+  --ccc-arrow-radius:     50%;
+  --ccc-arrow-shadow:     0 2px 10px rgba(0,0,0,.1);
+
+  /* ── Pagination ── */
+  --ccc-dot-color:        #d0d0e0;
+  --ccc-dot-active-color: #1a3a5c;
+  --ccc-dot-size:         8px;
+  --ccc-dot-active-width: 24px;
+
+  /* ── Applied ── */
+  box-sizing: border-box;
+  width: 100%;
+  padding: var(--ccc-padding-top) 0 var(--ccc-padding-bottom);
+  position: relative;
+  font-family: inherit;
+}
+
+.ccc-wrap *, .ccc-wrap *::before, .ccc-wrap *::after { box-sizing: inherit; }
+
+/* ── Slider layout ── */
+.ccc-wrap .ccc-slider-outer {
+  position: relative;
+  padding: 0 52px;
+}
+
+.ccc-wrap .ccc-swiper {
+  width: 100%;
+  overflow: hidden;
+  padding: 12px 4px 52px !important;
+}
+
+/* ── Equal height slides ── */
+.ccc-wrap .swiper-wrapper { align-items: stretch; }
+.ccc-wrap .swiper-slide   { height: auto; }
+
+/* ── Card ── */
+.ccc-wrap .ccc-card {
+  background:    var(--ccc-card-bg);
+  border:        var(--ccc-card-border);
+  border-radius: var(--ccc-card-radius);
+  box-shadow:    var(--ccc-card-shadow);
+  display:       flex;
+  flex-direction:column;
+  height:        100%;
+  overflow:      hidden;
+  transition:    transform .3s ease, box-shadow .3s ease;
+}
+.ccc-wrap .ccc-card:hover {
+  transform:  translateY(-5px);
+  box-shadow: var(--ccc-card-shadow-hover);
+}
+
+/* ── Card image wrapper ── */
+.ccc-wrap .ccc-img-wrap {
+  position:      relative;
+  overflow:      hidden;
+  border-radius: var(--ccc-img-radius);
+  flex-shrink:   0;
+}
+/* Aspect-ratio box */
+.ccc-wrap .ccc-img-wrap::before {
+  content: '';
+  display: block;
+  padding-top: var(--ccc-img-ratio);
+}
+.ccc-wrap .ccc-img-wrap img {
+  position:   absolute;
+  inset:      0;
+  width:      100%;
+  height:     100%;
+  object-fit: cover;
+  display:    block;
+  transition: transform .5s ease;
+}
+.ccc-wrap .ccc-card:hover .ccc-img-wrap img { transform: scale(1.05); }
+
+/* ── Badge ── */
+.ccc-wrap .ccc-badge {
+  position:      absolute;
+  top:           12px;
+  left:          12px;
+  background:    var(--ccc-badge-bg);
+  color:         var(--ccc-badge-color);
+  font-size:     var(--ccc-badge-font-size);
+  font-weight:   700;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  padding:       4px 10px;
+  border-radius: var(--ccc-badge-radius);
+  pointer-events:none;
+  z-index:       2;
+}
+
+/* ── Card body ── */
+.ccc-wrap .ccc-card-body {
+  padding:        var(--ccc-card-padding);
+  display:        flex;
+  flex-direction: column;
+  flex:           1;
+}
+
+/* ── Title ── */
+.ccc-wrap .ccc-title {
+  font-family:   var(--ccc-title-font) !important;
+  font-size:     var(--ccc-title-size) !important;
+  font-weight:   var(--ccc-title-weight) !important;
+  color:         var(--ccc-title-color) !important;
+  line-height:   var(--ccc-title-line-height) !important;
+  margin:        0 0 var(--ccc-title-margin-bottom) !important;
+  padding:       0 !important;
+  border:        none !important;
+  background:    none !important;
+  box-shadow:    none !important;
+}
+
+/* ── Description ── */
+.ccc-wrap .ccc-desc {
+  font-family: var(--ccc-desc-font) !important;
+  font-size:   var(--ccc-desc-size) !important;
+  color:       var(--ccc-desc-color) !important;
+  line-height: var(--ccc-desc-line-height) !important;
+  margin:      0 0 var(--ccc-desc-margin-bottom) !important;
+  padding:     0 !important;
+  flex:        1;
+}
+
+/* ── Button ── */
+.ccc-wrap .ccc-btn {
+  display:        inline-flex;
+  align-items:    center;
+  gap:            6px;
+  background:     var(--ccc-btn-bg);
+  color:          var(--ccc-btn-color) !important;
+  border:         var(--ccc-btn-border);
+  border-radius:  var(--ccc-btn-radius);
+  padding:        var(--ccc-btn-padding);
+  font-family:    var(--ccc-btn-font) !important;
+  font-size:      var(--ccc-btn-font-size) !important;
+  font-weight:    var(--ccc-btn-font-weight) !important;
+  letter-spacing: var(--ccc-btn-letter-spacing);
+  text-decoration:none !important;
+  align-self:     flex-start;
+  cursor:         pointer;
+  transition:     background .25s ease, color .25s ease, border-color .25s ease, transform .2s ease, box-shadow .2s ease;
+  line-height:    1.2;
+}
+.ccc-wrap .ccc-btn:hover {
+  background:   var(--ccc-btn-bg-hover);
+  color:        var(--ccc-btn-color-hover) !important;
+  border:       var(--ccc-btn-border-hover);
+  transform:    translateY(-1px);
+  box-shadow:   0 4px 12px rgba(0,0,0,.15);
+}
+.ccc-wrap .ccc-btn svg { transition: transform .2s ease; flex-shrink: 0; }
+.ccc-wrap .ccc-btn:hover svg { transform: translateX(3px); }
+
+/* ── Nav arrows ── */
+.ccc-wrap .ccc-prev,
+.ccc-wrap .ccc-next {
+  position:       absolute;
+  top:            50%;
+  transform:      translateY(calc(-50% - 24px)); /* offset for dots */
+  z-index:        10;
+  width:          var(--ccc-arrow-size);
+  height:         var(--ccc-arrow-size);
+  background:     var(--ccc-arrow-bg);
+  border:         var(--ccc-arrow-border);
+  border-radius:  var(--ccc-arrow-radius);
+  display:        flex;
+  align-items:    center;
+  justify-content:center;
+  cursor:         pointer;
+  box-shadow:     var(--ccc-arrow-shadow);
+  transition:     background .25s ease, border-color .25s ease, box-shadow .25s ease;
+  user-select:    none;
+  -webkit-user-select: none;
+}
+.ccc-wrap .ccc-prev { left: 0; }
+.ccc-wrap .ccc-next { right: 0; }
+.ccc-wrap .ccc-prev:hover,
+.ccc-wrap .ccc-next:hover {
+  background:  var(--ccc-arrow-bg-hover);
+  border-color:var(--ccc-arrow-bg-hover);
+  box-shadow:  0 4px 16px rgba(0,0,0,.2);
+}
+.ccc-wrap .ccc-prev svg path,
+.ccc-wrap .ccc-next svg path {
+  stroke: var(--ccc-arrow-color);
+  transition: stroke .25s ease;
+}
+.ccc-wrap .ccc-prev:hover svg path,
+.ccc-wrap .ccc-next:hover svg path { stroke: var(--ccc-arrow-color-hover); }
+.ccc-wrap .swiper-button-disabled { opacity: .3 !important; pointer-events: none; }
+
+/* ── Pagination ── */
+.ccc-wrap .ccc-dots {
+  bottom: 0 !important;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+.ccc-wrap .swiper-pagination-bullet {
+  width:        var(--ccc-dot-size) !important;
+  height:       var(--ccc-dot-size) !important;
+  background:   var(--ccc-dot-color) !important;
+  opacity:      1 !important;
+  border-radius:50px !important;
+  transition:   width .25s ease, background .25s ease !important;
+  cursor: pointer;
+}
+.ccc-wrap .swiper-pagination-bullet-active {
+  background: var(--ccc-dot-active-color) !important;
+  width:      var(--ccc-dot-active-width) !important;
+}
+
+/* ── Responsive fallback (Swiper JS handles columns; this handles padding) ── */
+@media (max-width: 767px) {
+  .ccc-wrap .ccc-slider-outer { padding: 0 36px; }
+}
+@media (max-width: 480px) {
+  .ccc-wrap .ccc-slider-outer { padding: 0 28px; }
+  .ccc-wrap { --ccc-card-padding: 18px; }
+}

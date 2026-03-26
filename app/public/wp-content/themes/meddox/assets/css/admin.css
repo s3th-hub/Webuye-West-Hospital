@@ -1,0 +1,26 @@
+.fs-17 {
+    font-size: 17px;
+}
+.lt-4 {
+    letter-spacing: -0.03em !important;
+}
+#wpbody #elementor-editor {
+	height: 100px;
+}
+.postbox-container #slider_revolution_metabox {
+	display: none;
+}
+.postbox-container .redux-wrap-div .redux-container {
+	overflow: visible
+}
+.elementor-control-type-layoutcontrol .radio-image-item {
+	border: 2px solid rgba(26,161,241, 0.2);
+}
+.elementor-control-type-layoutcontrol .radio-image-item.selected,
+.elementor-control-type-layoutcontrol .radio-image-item:hover {
+	box-shadow: 0px 0px 15px rgba(0,0,0,0.12);
+	border: 2px solid rgba(26,161,241, 1);
+}
+.elementor-control-type-repeater.elementor-repeater-has-minimum-rows .elementor-repeater-tool-remove{
+  display: table-cell !important;
+}

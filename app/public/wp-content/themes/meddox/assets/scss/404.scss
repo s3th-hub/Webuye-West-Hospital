@@ -1,0 +1,53 @@
+.error404 {
+	#pxl-page-title-default {
+		display: none;
+	}
+	background-size: cover;
+	background-position: center;
+	#pxl-main {
+		padding: 0;
+	}
+	header,footer,#pxl-page-title-elementor {
+		display: none;
+	}
+	.wrap-content-404 {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		
+		text-align: center;
+		height: 100vh;
+		.pxl-error-inner {
+			position: relative;
+			z-index: 99;
+			max-width: 900px;
+			margin: auto;
+			padding: 0 15px;
+			.error-404-image {
+				max-height: 420px;
+				overflow: hidden;
+				display: flex;
+				align-items:center;
+			}
+		}
+		.pxl-error-title {
+			font-size: 250px;
+			line-height: 1.2;
+			text-transform: uppercase;
+			color: $secondary_color;
+			margin-bottom: 30px;
+			@media (max-width: 575px) {
+				font-size: 150px
+			}
+		}
+		
+		.error-404-desc {
+			color: $regular_color;
+			font-size: 14px;
+			font-weight: 400;
+			@extend .ft-public-sans;  
+			line-height: 25px;
+			margin-bottom: 45px;
+		}
+	}
+}

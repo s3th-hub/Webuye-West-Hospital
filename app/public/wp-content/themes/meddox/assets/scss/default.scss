@@ -1,0 +1,169 @@
+/*
+color: #{'rgba(var(--primary-color-rgb),0.1)'};
+@extend .ft-theme-default;
+font-family: 'Public Sans', sans-serif;
+@extend .ft-theme-default;
+font-family: 'Rajdhani';
+color: {{VALUE}};text-fill-color: {{VALUE}};-webkit-text-fill-color: {{VALUE}};background-image: none;
+*/
+
+html {
+    box-sizing: border-box;
+}
+body {
+    background-color: #fff;
+    font-size: 16px;
+    line-height: 1.625;
+    color: #647589;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    font-weight: normal;
+    letter-spacing: 0;
+    font-family: 'Public Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    &.body-overflow {
+        overflow: hidden;
+    }
+}
+a {
+    @include transition(all .25s cubic-bezier(.645,.045,.355,1));
+    &:before, &:after {
+        @include transition(inherit);
+    }
+    color: $secondary_color;
+    &:hover, &:focus {
+        color: $primary_color;
+    }
+    &:active {
+        color: $primary_color;
+    }
+}
+a, a:hover, a:focus, a:before, a:after {
+  outline: none;
+  text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6 {
+    @extend .ft-theme-default;
+    color: $secondary_color;
+    font-weight: 700;
+    margin: 0 0 15px;
+    clear: both;
+    line-height: 1.2;
+}
+h1, .h1 {
+  font-size: 48px;
+}
+
+h2, .h2 {
+  font-size: 42px;
+}
+
+h3, .h3 {
+  font-size: 32px;
+}
+
+h4, .h4 {
+  font-size: 28px;
+}
+
+h5, .h5 {
+  font-size: 22px;
+}
+
+h6, .h6 {
+  font-size: 18px;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    border-style: none;
+}
+p {
+  margin: 0 0 15px;
+  font-size: 16px;
+}
+
+// Unitest
+//--------------------------------------------------
+.wp-caption {
+    margin-bottom: 1.5em;
+    max-width: 100%;
+    img[class*="wp-image-"] {
+        @include center-block;
+    }
+    .wp-caption-text {
+        padding: 0.8075em 0;
+        font-size: 0.875em;
+        font-style: italic;
+    }
+}
+.gallery-caption {
+    opacity: 1;
+}
+.wp-caption-text {
+    text-align: center;
+}
+.alignleft,
+.alignright,
+.aligncenter {
+    margin-top: 6px;
+    margin-bottom: 45px;
+}
+.alignleft {
+    display: inline;
+    float: left;
+    margin-right: 35px;
+}
+.alignright {
+    display: inline;
+    float: right;
+    margin-left: 35px;
+}
+.aligncenter {
+    clear: both;
+    @include center-block;
+}
+.sticky {
+    display: block;
+}
+.screen-reader-text {
+    display: none;
+}
+.bypostauthor {
+    display: block;
+}
+blockquote {
+    background-color: $secondary_color;
+    padding: 30px 50px;
+    margin-bottom: 30px;
+    border-radius: 3px;
+    margin: 30px 0;
+    position: relative;
+    &:before{
+        content: "";
+        background-image: url(../img/icon-quote.png);
+        left: 30px;
+        top: 20px;
+        width: 67px;
+        height: 65px;
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    p{
+        font-size: 24px;
+        font-weight: 600;
+        color: #fff;
+        line-height: 1.25;
+        position: relative;
+        margin-bottom: 0px;
+    }
+}
+#tslOverlay {
+  background-color: transparent !important;
+  z-index: 999999 !important;
+}

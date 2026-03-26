@@ -1,0 +1,11 @@
+<?php
+
+class PxlHiddenSidebar_Widget extends Pxltheme_Core_Widget_Base{
+    protected $name = 'pxl_hidden_sidebar';
+    protected $title = 'Pxl Hidden Sidebar';
+    protected $icon = 'eicon-menu-bar';
+    protected $categories = array( 'pxltheme-core' );
+    protected $params = '{"sections":[{"name":"section_content","label":"Content","tab":"content","controls":[{"name":"template","label":"Select Templates","type":"select","options":{"2297":"Hidden Sidebar"},"default":""},{"name":"pxl_icon","label":"Icon","type":"icons","fa4compatibility":"icon"},{"name":"icon_color","label":"Icon Color","type":"color","selectors":{"{{WRAPPER}} .pxl-hidden-button":"color: {{VALUE}};"}},{"name":"bgr_color","label":"Background Color","type":"color","selectors":{"{{WRAPPER}} .pxl-hidden-button":"background-color: {{VALUE}};"}},{"name":"bgr_color_hover","label":"Background Color Hover","type":"color","selectors":{"{{WRAPPER}} .pxl-hidden-button:hover":"background-color: {{VALUE}};"}},{"name":"icon_color_hover","label":"Icon Color Hover","type":"color","selectors":{"{{WRAPPER}} .pxl-hidden-button:hover":"color: {{VALUE}};"}},{"name":"icon_font_size","label":"Icon Font Size","type":"slider","control_type":"responsive","size_units":["px"],"range":{"px":{"min":0,"max":300}},"selectors":{"{{WRAPPER}} .pxl-hidden-button":"font-size: {{SIZE}}{{UNIT}};"}},{"name":"style","label":"Style","type":"select","options":{"style-default":"Default","style-box":"Box"},"default":"style-default"},{"name":"box_color","label":"Box Color","type":"color","selectors":{"{{WRAPPER}} .pxl-hidden-button.style-box":"background-color: {{VALUE}};"},"condition":{"style":["style-box"]}},{"name":"box_height","label":"Box Height","type":"slider","control_type":"responsive","size_units":["px"],"range":{"px":{"min":0,"max":300}},"selectors":{"{{WRAPPER}} .pxl-hidden-button.style-box":"height: {{SIZE}}{{UNIT}};"},"condition":{"style":["style-box"]}},{"name":"box_width","label":"Box Width","type":"slider","control_type":"responsive","size_units":["px"],"range":{"px":{"min":0,"max":300}},"selectors":{"{{WRAPPER}} .pxl-hidden-button.style-box":"width: {{SIZE}}{{UNIT}};"},"condition":{"style":["style-box"]}}]}]}';
+    protected $styles = array(  );
+    protected $scripts = array(  );
+}

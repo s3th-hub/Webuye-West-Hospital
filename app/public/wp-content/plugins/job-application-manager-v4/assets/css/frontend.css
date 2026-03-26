@@ -1,0 +1,663 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   Job Application Manager – Frontend Styles
+   Primary: #2e4592  |  Fonts: Manrope (headings) + Inter (body)
+───────────────────────────────────────────────────────────────────────────── */
+
+:root {
+  --jam-primary:        #2e4592;
+  --jam-primary-dark:   #1e2e6e;
+  --jam-primary-light:  #eef1fb;
+  --jam-accent:         #4f6bca;
+  --jam-success:        #16a34a;
+  --jam-success-bg:     #f0fdf4;
+  --jam-error:          #dc2626;
+  --jam-error-bg:       #fef2f2;
+  --jam-warning:        #d97706;
+  --jam-border:         #d1d5e8;
+  --jam-border-focus:   #2e4592;
+  --jam-text:           #1a1f3c;
+  --jam-text-muted:     #6b7280;
+  --jam-bg:             #f8f9fd;
+  --jam-card-bg:        #ffffff;
+  --jam-radius:         12px;
+  --jam-radius-sm:      8px;
+  --jam-shadow:         0 1px 3px rgba(46, 69, 146, .08), 0 4px 16px rgba(46, 69, 146, .06);
+  --jam-shadow-hover:   0 4px 12px rgba(46, 69, 146, .15);
+  --jam-font-body:      'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --jam-font-heading:   'Manrope', 'Inter', sans-serif;
+  --jam-transition:     0.2s ease;
+}
+
+/* ── Wrapper ─────────────────────────────────────────────────────────────── */
+.jam-form-wrapper {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0;
+  font-family: var(--jam-font-body);
+  color: var(--jam-text);
+}
+
+/* ── Form Header ─────────────────────────────────────────────────────────── */
+.jam-form-header {
+  margin-bottom: 32px;
+}
+
+.jam-form-title {
+  font-family: var(--jam-font-heading) !important;
+  font-size: clamp(22px, 4vw, 32px) !important;
+  font-weight: 800 !important;
+  color: var(--jam-primary) !important;
+  margin: 0 0 8px !important;
+  line-height: 1.2 !important;
+}
+
+.jam-form-subtitle {
+  font-size: 15px;
+  color: var(--jam-text-muted);
+  margin: 0 !important;
+}
+
+/* ── Notices ─────────────────────────────────────────────────────────────── */
+.jam-notice {
+  padding: 16px 20px;
+  border-radius: var(--jam-radius-sm);
+  margin-bottom: 24px;
+  font-size: 15px;
+  line-height: 1.5;
+  border-left: 4px solid;
+}
+
+.jam-notice--success {
+  background: var(--jam-success-bg);
+  border-color: var(--jam-success);
+  color: #14532d;
+}
+
+.jam-notice--error {
+  background: var(--jam-error-bg);
+  border-color: var(--jam-error);
+  color: #7f1d1d;
+}
+
+/* ── Form & Sections ─────────────────────────────────────────────────────── */
+.jam-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.jam-section {
+  background: var(--jam-card-bg);
+  border: 1px solid var(--jam-border);
+  border-radius: var(--jam-radius);
+  padding: 28px 32px;
+  box-shadow: var(--jam-shadow);
+  transition: box-shadow var(--jam-transition);
+}
+
+.jam-section:hover {
+  box-shadow: var(--jam-shadow-hover);
+}
+
+.jam-section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--jam-primary-light);
+}
+
+.jam-section-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--jam-primary);
+  color: #fff;
+  font-family: var(--jam-font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.jam-section-title {
+  font-family: var(--jam-font-heading) !important;
+  font-size: 17px !important;
+  font-weight: 700 !important;
+  color: var(--jam-primary) !important;
+  margin: 0 !important;
+  line-height: 1.3 !important;
+}
+
+/* ── Fields Grid ─────────────────────────────────────────────────────────── */
+.jam-fields-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.jam-span-full {
+  grid-column: 1 / -1;
+}
+
+.jam-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* ── Labels ──────────────────────────────────────────────────────────────── */
+.jam-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--jam-text);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.jam-required {
+  color: var(--jam-error);
+  font-size: 14px;
+  line-height: 1;
+}
+
+.jam-hint {
+  font-weight: 400;
+  font-size: 12px;
+  color: var(--jam-text-muted);
+  font-style: normal;
+}
+
+.jam-optional {
+  font-weight: 400;
+  font-size: 11px;
+  color: var(--jam-text-muted);
+  background: #f3f4f6;
+  padding: 1px 6px;
+  border-radius: 4px;
+}
+
+/* ── Inputs & Selects ────────────────────────────────────────────────────── */
+.jam-input,
+.jam-select {
+  width: 100%;
+  padding: 11px 14px;
+  font-family: var(--jam-font-body);
+  font-size: 14px;
+  color: var(--jam-text);
+  background: #fff;
+  border: 1.5px solid var(--jam-border);
+  border-radius: var(--jam-radius-sm);
+  outline: none;
+  transition: border-color var(--jam-transition), box-shadow var(--jam-transition);
+  box-sizing: border-box;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.jam-select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 40px;
+  cursor: pointer;
+}
+
+.jam-input::placeholder { color: #9ca3af; }
+
+.jam-input:focus,
+.jam-select:focus {
+  border-color: var(--jam-border-focus);
+  box-shadow: 0 0 0 3px rgba(46, 69, 146, .12);
+}
+
+.jam-input.jam-field-error,
+.jam-select.jam-field-error {
+  border-color: var(--jam-error);
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, .1);
+}
+
+/* ── File Drop Zone ──────────────────────────────────────────────────────── */
+.jam-file-drop {
+  position: relative;
+  border: 2px dashed var(--jam-border);
+  border-radius: var(--jam-radius-sm);
+  background: var(--jam-bg);
+  transition: all var(--jam-transition);
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.jam-file-drop:hover,
+.jam-file-drop.jam-drag-over {
+  border-color: var(--jam-primary);
+  background: var(--jam-primary-light);
+}
+
+.jam-file-drop.jam-has-files {
+  border-color: var(--jam-success);
+  background: var(--jam-success-bg);
+}
+
+.jam-file-drop.jam-field-error {
+  border-color: var(--jam-error);
+  background: var(--jam-error-bg);
+}
+
+.jam-file-input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+}
+
+.jam-file-ui {
+  padding: 24px 20px;
+  text-align: center;
+  pointer-events: none;
+}
+
+.jam-file-icon svg {
+  width: 36px;
+  height: 36px;
+  stroke: var(--jam-accent);
+  margin-bottom: 8px;
+}
+
+.jam-file-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--jam-primary);
+  margin: 0 0 4px !important;
+}
+
+.jam-file-formats {
+  font-size: 12px;
+  color: var(--jam-text-muted);
+  margin: 0 !important;
+}
+
+/* File preview list */
+.jam-file-preview {
+  margin-top: 10px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  pointer-events: none;
+}
+
+.jam-file-preview-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,.8);
+  border: 1px solid var(--jam-border);
+  border-radius: 6px;
+  padding: 7px 10px;
+  font-size: 13px;
+  color: var(--jam-text);
+}
+
+.jam-file-preview-item svg {
+  width: 16px;
+  height: 16px;
+  stroke: var(--jam-success);
+  flex-shrink: 0;
+}
+
+.jam-file-preview-name {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.jam-file-preview-size {
+  color: var(--jam-text-muted);
+  font-size: 11px;
+  flex-shrink: 0;
+}
+
+/* ── Error Messages ───────────────────────────────────────────────────────── */
+.jam-error-msg {
+  font-size: 12px;
+  color: var(--jam-error);
+  display: none;
+  align-items: center;
+  gap: 4px;
+}
+
+.jam-error-msg:not(:empty) {
+  display: flex;
+}
+
+/* ── Submit Row ──────────────────────────────────────────────────────────── */
+.jam-submit-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 8px 0;
+}
+
+.jam-required-note {
+  font-size: 13px;
+  color: var(--jam-text-muted);
+  margin: 0 !important;
+}
+
+.jam-btn-submit {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: var(--jam-primary);
+  color: #fff !important;
+  font-family: var(--jam-font-heading);
+  font-size: 15px;
+  font-weight: 700;
+  padding: 14px 36px;
+  border: none;
+  border-radius: var(--jam-radius-sm);
+  cursor: pointer;
+  transition: background var(--jam-transition), transform var(--jam-transition), box-shadow var(--jam-transition);
+  letter-spacing: .3px;
+  min-width: 200px;
+  box-shadow: 0 4px 14px rgba(46, 69, 146, .35);
+}
+
+.jam-btn-submit:hover:not(:disabled) {
+  background: var(--jam-primary-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(46, 69, 146, .4);
+}
+
+.jam-btn-submit:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.jam-btn-submit:disabled,
+.jam-btn-submit.jam-loading {
+  opacity: .7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Spinner */
+.jam-btn-spinner {
+  display: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255,255,255,.4);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: jam-spin .7s linear infinite;
+}
+
+.jam-loading .jam-btn-spinner { display: inline-block; }
+
+@keyframes jam-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── Success State ───────────────────────────────────────────────────────── */
+.jam-success-card {
+  background: var(--jam-card-bg);
+  border: 1px solid #bbf7d0;
+  border-radius: var(--jam-radius);
+  padding: 48px 32px;
+  text-align: center;
+  box-shadow: var(--jam-shadow);
+}
+
+.jam-success-icon {
+  width: 64px;
+  height: 64px;
+  background: var(--jam-success-bg);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.jam-success-icon svg {
+  width: 32px;
+  height: 32px;
+  stroke: var(--jam-success);
+}
+
+/* ── Responsive ──────────────────────────────────────────────────────────── */
+@media ( max-width: 640px ) {
+  .jam-section { padding: 20px 16px; }
+  .jam-fields-grid { grid-template-columns: 1fr; }
+  .jam-span-full { grid-column: 1; }
+  .jam-submit-row { flex-direction: column; align-items: stretch; }
+  .jam-btn-submit { width: 100%; justify-content: center; }
+}
+
+/* ── Elementor compatibility ─────────────────────────────────────────────── */
+.elementor-widget-shortcode .jam-form-wrapper,
+.elementor-widget-text-editor .jam-form-wrapper {
+  max-width: 100%;
+}
+
+/* ── Honeypot (accessibility) ───────────────────────────────────────────── */
+.jam-hp-field {
+  position: absolute !important;
+  left: -9999px !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+  pointer-events: none !important;
+}
+
+/* ── Textarea ────────────────────────────────────────────────────────────── */
+.jam-textarea {
+  width: 100%;
+  padding: 11px 14px;
+  font-family: var(--jam-font-body);
+  font-size: 14px;
+  color: var(--jam-text);
+  background: #fff;
+  border: 1.5px solid var(--jam-border);
+  border-radius: var(--jam-radius-sm);
+  outline: none;
+  transition: border-color var(--jam-transition), box-shadow var(--jam-transition);
+  box-sizing: border-box;
+  resize: vertical;
+  min-height: 80px;
+}
+.jam-textarea:focus {
+  border-color: var(--jam-border-focus);
+  box-shadow: 0 0 0 3px rgba(46, 69, 146, .12);
+}
+
+/* ── reCAPTCHA wrapper ───────────────────────────────────────────────────── */
+.jam-recaptcha-wrapper {
+  background: var(--jam-card-bg);
+  border: 1px solid var(--jam-border);
+  border-radius: var(--jam-radius);
+  padding: 24px 32px;
+  box-shadow: var(--jam-shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* ── Consent + Submit section ────────────────────────────────────────────── */
+.jam-submit-section {
+  background: var(--jam-card-bg);
+  border: 1px solid var(--jam-border);
+  border-radius: var(--jam-radius);
+  padding: 24px 32px;
+  box-shadow: var(--jam-shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Consent checkbox row */
+.jam-consent-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.jam-consent-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  cursor: pointer;
+  position: relative;
+  line-height: 1.5;
+}
+
+/* Hide native checkbox */
+.jam-consent-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Custom checkbox box */
+.jam-consent-box {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--jam-border);
+  border-radius: 4px;
+  background: #fff;
+  margin-top: 2px;
+  transition: all var(--jam-transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.jam-consent-box::after {
+  content: '';
+  display: block;
+  width: 5px;
+  height: 9px;
+  border: 2px solid #fff;
+  border-top: none;
+  border-left: none;
+  transform: rotate(45deg) translateY(-1px);
+  opacity: 0;
+  transition: opacity var(--jam-transition);
+}
+
+.jam-consent-input:checked ~ .jam-consent-box {
+  background: var(--jam-primary);
+  border-color: var(--jam-primary);
+}
+
+.jam-consent-input:checked ~ .jam-consent-box::after {
+  opacity: 1;
+}
+
+.jam-consent-input:focus ~ .jam-consent-box {
+  box-shadow: 0 0 0 3px rgba(46, 69, 146, .18);
+}
+
+/* Error state for consent */
+.jam-consent-label.jam-consent-error .jam-consent-box {
+  border-color: var(--jam-error);
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, .1);
+}
+
+.jam-consent-text {
+  font-size: 14px;
+  color: var(--jam-text);
+  font-weight: 500;
+  line-height: 1.55;
+}
+
+/* Submit row inside submit section */
+.jam-submit-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 0;
+  border: none;
+  background: none;
+  box-shadow: none;
+}
+
+/* ── Admin CSS additions ─────────────────────────────────────────────────── */
+@media ( max-width: 640px ) {
+  .jam-submit-section { padding: 20px 16px; }
+  .jam-recaptcha-wrapper { padding: 20px 16px; }
+}
+
+/* ── Form type indicator badge ───────────────────────────────────────────── */
+#jam-type-indicator {
+  margin-bottom: 4px;
+}
+
+.jam-type-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 50px;
+  font-family: var(--jam-font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .2px;
+  border: 2px solid transparent;
+  transition: all var(--jam-transition);
+}
+
+.jam-badge--standard {
+  background: var(--jam-primary-light);
+  color: var(--jam-primary);
+  border-color: rgba(46,69,146,.2);
+}
+
+.jam-badge--intern {
+  background: #fef3c7;
+  color: #92400e;
+  border-color: rgba(217,119,6,.25);
+}
+
+/* ── Intern section accent ───────────────────────────────────────────────── */
+.jam-section--intern .jam-section-header {
+  border-bottom-color: #fde68a;
+}
+
+.jam-section--intern .jam-section-title {
+  color: #92400e !important;
+}
+
+.jam-section--intern .jam-section-number.jam-intern-num {
+  background: #d97706;
+}
+
+/* ── Conditional section wrapper ─────────────────────────────────────────── */
+.jam-conditional-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Each inner .jam-section inside needs no extra gap */
+.jam-conditional-section > .jam-section {
+  margin: 0;
+}

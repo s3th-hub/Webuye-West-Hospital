@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'Public Sans';
+    font-weight: 400;
+    font-style: normal;
+    src: url('../fonts/font-theme/PublicSans-Italic-VariableFont_wght.ttf') format('ttf'),
+    url('../fonts/font-theme/PublicSans-Italic-VariableFont_wght.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'Rajdhani';
+    font-weight: 700;
+    font-style: normal;
+    src: url('../fonts/font-theme/Rajdhani-Bold.ttf') format('ttf'),
+    
+}
+
+
+.ft-rajdhani {
+    font-family: 'Rajdhani' !important;
+    font-weight: 700;
+}
+.ft-public-sans{
+    font-family: 'Public Sans' !important;
+}
+.fab.fa-facebook-f{
+    &:before{
+        content: "\f39e" !important;
+    }
+}

@@ -1,0 +1,32 @@
+{
+	"icons": [
+		"flaticon_meddox-004-pinterest",
+		"flaticon_meddox-005-linkedin",
+		"flaticon_meddox-006-stethoscope",
+		"flaticon_meddox-007-medicine",
+		"flaticon_meddox-008-medical-symbol",
+		"flaticon_meddox-009-alarm",
+		"flaticon_meddox-010-ambulance",
+		"flaticon_meddox-011-healthcare",
+		"flaticon_meddox-012-stopwatch",
+		"flaticon_meddox-013-draw-check-mark",
+		"flaticon_meddox-014-neurology",
+		"flaticon_meddox-015-tooth",
+		"flaticon_meddox-016-orthopedic",
+		"flaticon_meddox-017-eye-bags",
+		"flaticon_meddox-018-liposuction",
+		"flaticon_meddox-019-bariatric-surgery",
+		"flaticon_meddox-020-medicine-1",
+		"flaticon_meddox-021-charity",
+		"flaticon_meddox-022-facebook-app-symbol",
+		"flaticon_meddox-023-linkedin-1",
+		"flaticon_meddox-024-instagram",
+		"flaticon_meddox-025-medical-team",
+		"flaticon_meddox-026-research",
+		"flaticon_meddox-027-experience",
+		"flaticon_meddox-028-trophy",
+		"flaticon_meddox-029-double-quotes",
+		"flaticon_meddox-031-quotation-mark",
+		"flaticon_meddox-032-water-waves"
+		]
+}

@@ -1,0 +1,11 @@
+<?php
+
+class ETC_CmsPriceList_Widget extends Elementor_Theme_Core_Widget_Base{
+    protected $name = 'cms_price_list';
+    protected $title = 'Price List';
+    protected $icon = 'eicon-price-list';
+    protected $categories = array( 'elementor-theme-core' );
+    protected $params = '{"sections":[{"name":"layout_section","label":"Layout","tab":"layout","controls":[{"name":"layout","label":"Templates","type":"layoutcontrol","default":"1","options":{"1":{"label":"Layout 1","image":"http:\/\/localhost:8888\/medcity\/wp-content\/themes\/medcity\/elementor\/templates\/widgets\/cms_price_list\/layout-image\/layout1.jpg"}}}]},{"name":"content_list","label":"Content","tab":"content","controls":[{"name":"list_title","label":"List Title","type":"text","label_block":true},{"name":"price","label":"Add Item","type":"repeater","controls":[{"name":"item_text","label":"Item Text","type":"textarea","label_block":true},{"name":"item_price","label":"Item Price","type":"text","label_block":true}],"title_field":"{{{ item_text }}}"}]},{"name":"section_style_settings","label":"Box Style","tab":"style","controls":[{"name":"box_background","label":"Box Background","type":"color","selectors":{"{{WRAPPER}} .cms-price-list":"background-color: {{VALUE}};"}},{"name":"heading_color","label":"Heading Color","type":"color","selectors":{"{{WRAPPER}} .cms-price-list h3.list-title":"color: {{VALUE}};"}},{"name":"list_text_color","label":"Text List Color","type":"color","selectors":{"{{WRAPPER}} .cms-price-list .item-text":"color: {{VALUE}};"}},{"name":"list_price_bg","label":"List Price Background","type":"color","selectors":{"{{WRAPPER}} .cms-price-list .price-item .item-inner .item-price":"background-color: {{VALUE}};"}},{"name":"box_padding","label":"Box Padding","type":"dimensions","control_type":"responsive","size_units":["px","em","%"],"separator":"before","selectors":{"{{WRAPPER}} .cms-price-list":"padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};"}}]}]}';
+    protected $styles = array(  );
+    protected $scripts = array(  );
+}

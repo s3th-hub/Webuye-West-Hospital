@@ -1,0 +1,72 @@
+// Page Title
+//--------------------------------------------------
+.redux-page.single #pagetitle{
+	background-image: none;
+	padding: 37px 0;
+	.page-title{
+		display: none;
+	}
+}
+#pagetitle {
+	padding: 85px 0;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	background-color: #f2f2f2;
+	.page-title-inner {
+		position: relative;
+		z-index: 1;
+		&.ptt-align-right{
+			text-align: right;
+		}
+		&.ptt-align-center{
+			text-align: center;
+			.page-title{
+				margin: 0 auto;
+				@media #{$min-lg} {
+					max-width: 50%;
+				}
+			}
+		}
+	}
+	.page-title {
+		margin-bottom: 0;
+		font-size: 40px;
+		line-height: 55px;
+		padding-bottom: 7px;
+	}
+}
+.cms-breadcrumb {
+	margin: 0;
+	list-style: none;
+	color: $secondary_color;
+	li {
+		display: inline-block;
+		font-size: 14px;
+		color: inherit;
+		a, span {
+			color: inherit;
+			&:after {
+				content: '\f105';
+				font-family: FontAwesome;
+				margin: 0 11px;
+				color: inherit;
+			}
+		}
+		a:hover {
+			color: $primary_color;
+			&:after {
+				color: inherit;
+			}
+		}
+		&:last-child {
+			a, span {
+				color: $tertiary_color;
+				&:after {
+					display: none;
+				}
+			}
+		}
+	}
+}

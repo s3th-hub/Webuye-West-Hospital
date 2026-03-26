@@ -1,0 +1,11 @@
+<?php
+
+class ETC_CmsCounterCarousel_Widget extends Elementor_Theme_Core_Widget_Base{
+    protected $name = 'cms_counter_carousel';
+    protected $title = 'Counter Carousel';
+    protected $icon = 'eicon-counter-circle';
+    protected $categories = array( 'elementor-theme-core' );
+    protected $params = '{"sections":[{"name":"layout_section","label":"Layout","tab":"layout","controls":[{"name":"layout","label":"Templates","type":"layoutcontrol","default":"1","options":{"1":{"label":"Layout 1","image":"http:\/\/localhost\/wp_medcity\/wp-content\/themes\/medcity\/elementor\/templates\/widgets\/cms_counter_carousel\/layout-image\/layout1.jpg"}}}]},{"name":"section_boxs","label":"Box Settings","tab":"content","controls":[{"name":"boxs","label":"","type":"repeater","default":[],"controls":[{"name":"starting_number","label":"Starting Number","type":"number","default":1},{"name":"ending_number","label":"Ending Number","type":"number","default":100},{"name":"description","label":"Description","type":"textarea","label_block":true,"default":""}]}]},{"name":"section_text_style","label":"Text Style","tab":"style","controls":[{"name":"number_color","label":"Number Color","type":"color","selectors":{"{{WRAPPER}} .cms-counter-number-wrapper":"color: {{VALUE}};"}},{"name":"number_typography","type":"typography","control_type":"group","selector":"{{WRAPPER}} .cms-counter-number-wrapper"},{"name":"title_color","label":"Description Color","type":"color","selectors":{"{{WRAPPER}} .box-text":"color: {{VALUE}};"}}]},{"name":"section_carousel_settings","label":"Carousel Settings","tab":"settings","controls":[{"name":"dots","label":"Show Dots","type":"switcher"},{"name":"pause_on_hover","label":"Pause on Hover","type":"switcher"},{"name":"autoplay","label":"Autoplay","type":"switcher"},{"name":"autoplay_speed","label":"Autoplay Speed","type":"number","default":5000,"condition":{"autoplay":"true"}},{"name":"infinite","label":"Infinite Loop","type":"switcher"},{"name":"speed","label":"Animation Speed","type":"number","default":500}]}]}';
+    protected $styles = array(  );
+    protected $scripts = array( 'jquery-slick','cms-clients-list-widget-js','jquery-numerator','cms-counter-widget-js' );
+}

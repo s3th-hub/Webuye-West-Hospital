@@ -1,0 +1,104 @@
+@font-face {
+    font-family: "flaticon_meddox";
+    src: url("./flaticon_meddox.ttf?71a936165b79da2c4ff391a4a7f75014") format("truetype"),
+url("./flaticon_meddox.woff?71a936165b79da2c4ff391a4a7f75014") format("woff"),
+url("./flaticon_meddox.woff2?71a936165b79da2c4ff391a4a7f75014") format("woff2"),
+url("./flaticon_meddox.eot?71a936165b79da2c4ff391a4a7f75014#iefix") format("embedded-opentype"),
+url("./flaticon_meddox.svg?71a936165b79da2c4ff391a4a7f75014#flaticon_meddox") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon_meddox !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-004-pinterest:before {
+    content: "\f101";
+}
+.flaticon-005-linkedin:before {
+    content: "\f102";
+}
+.flaticon-006-stethoscope:before {
+    content: "\f103";
+}
+.flaticon-007-medicine:before {
+    content: "\f104";
+}
+.flaticon-008-medical-symbol:before {
+    content: "\f105";
+}
+.flaticon-009-alarm:before {
+    content: "\f106";
+}
+.flaticon-010-ambulance:before {
+    content: "\f107";
+}
+.flaticon-011-healthcare:before {
+    content: "\f108";
+}
+.flaticon-012-stopwatch:before {
+    content: "\f109";
+}
+.flaticon-013-draw-check-mark:before {
+    content: "\f10a";
+}
+.flaticon-014-neurology:before {
+    content: "\f10b";
+}
+.flaticon-015-tooth:before {
+    content: "\f10c";
+}
+.flaticon-016-orthopedic:before {
+    content: "\f10d";
+}
+.flaticon-017-eye-bags:before {
+    content: "\f10e";
+}
+.flaticon-018-liposuction:before {
+    content: "\f10f";
+}
+.flaticon-019-bariatric-surgery:before {
+    content: "\f110";
+}
+.flaticon-020-medicine-1:before {
+    content: "\f111";
+}
+.flaticon-021-charity:before {
+    content: "\f112";
+}
+.flaticon-022-facebook-app-symbol:before {
+    content: "\f113";
+}
+.flaticon-023-linkedin-1:before {
+    content: "\f114";
+}
+.flaticon-024-instagram:before {
+    content: "\f115";
+}
+.flaticon-025-medical-team:before {
+    content: "\f116";
+}
+.flaticon-026-research:before {
+    content: "\f117";
+}
+.flaticon-027-experience:before {
+    content: "\f118";
+}
+.flaticon-028-trophy:before {
+    content: "\f119";
+}
+.flaticon-029-double-quotes:before {
+    content: "\f11a";
+}
+.flaticon-031-quotation-mark:before {
+    content: "\f11b";
+}
+.flaticon-032-water-waves:before {
+    content: "\f11c";
+}

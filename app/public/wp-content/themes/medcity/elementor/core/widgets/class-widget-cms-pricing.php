@@ -1,0 +1,11 @@
+<?php
+
+class ETC_CmsPricing_Widget extends Elementor_Theme_Core_Widget_Base{
+    protected $name = 'cms_pricing';
+    protected $title = 'Pricing';
+    protected $icon = 'eicon-editor-list-ul';
+    protected $categories = array( 'elementor-theme-core' );
+    protected $params = '{"sections":[{"name":"layout_section","label":"Layout","tab":"layout","controls":[{"name":"layout","label":"Templates","type":"layoutcontrol","default":"1","options":{"1":{"label":"Layout 1","image":"http:\/\/localhost:8888\/medcity\/wp-content\/themes\/medcity\/elementor\/templates\/widgets\/cms_pricing\/layout-image\/layout1.jpg"}}}]},{"name":"section_list","label":"Content","tab":"content","controls":[{"name":"title","label":"Title","type":"text","placeholder":"Enter your title","label_block":true},{"name":"description","label":"Description","type":"textarea","placeholder":"Enter your description","rows":6,"show_label":false},{"name":"content_list","label":"Feature","type":"repeater","default":[],"controls":[{"name":"content","label":"Content","type":"text","label_block":true},{"name":"pricing_list_item_slashed","label":"Slashed","type":"switcher","description":"Item will invisible but keep height"}],"title_field":"{{{ content }}}"},{"name":"price","label":"Price","type":"text"},{"name":"time","label":"Time","type":"text"},{"name":"button_text","label":"Button Text","type":"text","default":""},{"name":"button_link","label":"Link","type":"url"}]},{"name":"section_style","label":"Style","tab":"style","controls":[{"name":"style","label":"Style","type":"select","options":{"style1":"Default","style2":"Primary"},"default":"style1"},{"name":"slashed_style","label":"Slashed Style","type":"select","options":{"sl-invisible":"Hidden","sl-slash":"Slash"},"default":"sl-invisible"},{"name":"price_border_radius","label":"Border Radius","type":"dimensions","size_units":["px","%"],"selectors":{"{{WRAPPER}} .cms-pricing-layout1 .cms-pricing-inner":"border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};"}}]}]}';
+    protected $styles = array(  );
+    protected $scripts = array(  );
+}

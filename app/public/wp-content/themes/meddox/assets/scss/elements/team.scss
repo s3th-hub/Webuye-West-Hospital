@@ -1,0 +1,462 @@
+.pxl-team-carousel1{
+	.pxl-swiper-slide{
+		.pxl-item--inner{
+			-webkit-transition: all 0.3s ease;
+			-o-transition: all 0.3s ease;
+			transition: all 0.3s ease;
+			.pxl-item--image{
+				position: relative;
+				overflow: hidden;
+				border-radius: 3px;
+				@include box-shadow(0 0 27px rgba($primary_color, 0.1));
+				img{
+					width: 100%;
+					height: 100%;
+					-webkit-transition: all 2s ease-out;
+					-o-transition: all 2s ease-out;
+					transition: all 2s ease-out;
+
+
+				}
+				.pxl-item--social{
+					position: absolute;
+					top: 15px;
+					left: -40px;
+					display: grid;
+					-webkit-transition: all 0.3s ease;
+					-o-transition: all 0.3s ease;
+					transition: all 0.3s ease;
+					a{
+						display: block;
+						background-color: $primary_color;
+						font-size: 13px;
+						color: #FFF;
+						width: 40px;
+						height: 40px;
+						line-height: 40px;
+						position: relative;
+						text-align: center;
+						i{
+							color: #fff;
+						}
+						&:hover{
+							background-color: $secondary_color;
+						}
+					}
+
+				}
+			}
+			.pxl-item--meta{
+				padding: 25px;
+				text-align: center;
+				.pxl-item--title{
+					text-transform: capitalize;
+					font-size: 24px;
+					line-height: 1.2;
+					font-weight: 700;
+					color: $secondary_color;
+					margin: 0;
+					@extend .ft-theme-default;
+					&:hover{
+						color: $primary_color;
+					}
+				}
+				.pxl-item--position{
+					display: inline-block;
+					color: $primary_color;
+					margin: 12px 0 0 0;
+					text-transform: capitalize;
+					font-size: 14px;
+					line-height: 1.1;
+					font-weight: 600;
+				}
+			}
+			&:hover{
+				.pxl-item--image{
+					img{
+						-webkit-transform: scale(1.3);
+						-ms-transform: scale(1.3);
+						transform: scale(1.3);
+
+					}
+					.pxl-item--social{
+						left: 15px;
+					}
+				}
+			}
+		}
+
+	}
+}
+
+.pxl-team-carousel2{
+	.pxl-swiper-slide{
+		.pxl-item--inner{
+			-webkit-transition: all 0.3s ease;
+			-o-transition: all 0.3s ease;
+			transition: all 0.3s ease;
+			.pxl-item--image{
+				position: relative;
+				overflow: hidden;
+				border-radius: 3px;
+				@include box-shadow(0 0 27px rgba($primary_color, 0.1));
+				img{
+					width: 100%;
+					height: 100%;
+					-webkit-transition: all 2s ease-out;
+					-o-transition: all 2s ease-out;
+					transition: all 2s ease-out;
+
+
+				}
+				.pxl-item--social{
+					position: absolute;
+					top: 15px;
+					left: -40px;
+					display: grid;
+					-webkit-transition: all 0.3s ease;
+					-o-transition: all 0.3s ease;
+					transition: all 0.3s ease;
+					a{
+						display: block;
+						background-color: $primary_color;
+						font-size: 13px;
+						color: #FFF;
+						width: 40px;
+						height: 40px;
+						line-height: 40px;
+						position: relative;
+						text-align: center;
+						margin-bottom: 8px;
+						i{
+							color: #fff;
+						}
+						&:hover{
+							background-color: $secondary_color;
+						}
+					}
+
+				}
+			}
+			.pxl-item--meta{
+				padding: 25px;
+				text-align: center;
+				.pxl-item--title{
+					text-transform: capitalize;
+					font-size: 24px;
+					line-height: 1.2;
+					font-weight: 700;
+					color: $secondary_color;
+					margin: 0;
+					@extend .ft-theme-default;
+					&:hover{
+						color: $primary_color;
+					}
+				}
+				.pxl-item--position{
+					display: inline-block;
+					color: $primary_color;
+					margin: 12px 0 0 0;
+					text-transform: capitalize;
+					font-size: 14px;
+					line-height: 1.1;
+					font-weight: 600;
+				}
+			}
+			&:hover{
+				.pxl-item--image{
+					img{
+						-webkit-transform: scale(1.3);
+						-ms-transform: scale(1.3);
+						transform: scale(1.3);
+
+					}
+					.pxl-item--social{
+						left: 15px;
+					}
+				}
+			}
+		}
+
+	}
+}
+.pxl-team-grid1{
+	.pxl-item--inner{
+		-webkit-transition: all 0.3s ease;
+		-o-transition: all 0.3s ease;
+		transition: all 0.3s ease;
+		.pxl-item--image{
+			position: relative;
+			overflow: hidden;
+			border-radius: 3px;
+			@include box-shadow(0 0 27px rgba($primary_color, 0.1));
+			img{
+				width: 100%;
+				height: 100%;
+				-webkit-transition: all 2s ease-out;
+				-o-transition: all 2s ease-out;
+				transition: all 2s ease-out;
+
+
+			}
+			.pxl-item--social{
+				position: absolute;
+				top: 15px;
+				left: -40px;
+				display: grid;
+				-webkit-transition: all 0.3s ease;
+				-o-transition: all 0.3s ease;
+				transition: all 0.3s ease;
+				a{
+					display: block;
+					background-color: $primary_color;
+					font-size: 13px;
+					color: #FFF;
+					width: 40px;
+					height: 40px;
+					line-height: 40px;
+					position: relative;
+					text-align: center;
+					i{
+						color: #fff;
+					}
+					&:hover{
+						background-color: $secondary_color;
+					}
+				}
+
+			}
+		}
+		.pxl-item--meta{
+			padding: 25px;
+			text-align: center;
+			.pxl-item--title a{
+				text-transform: capitalize;
+				font-size: 24px;
+				line-height: 1.2;
+				font-weight: 700;
+				color: $secondary_color;
+				margin: 0;
+				@extend .ft-theme-default;
+				&:hover{
+					color: $primary_color;
+				}
+			}
+			.pxl-item--position{
+				display: inline-block;
+				color: $primary_color;
+				margin: 12px 0 0 0;
+				text-transform: capitalize;
+				font-size: 14px;
+				line-height: 1.1;
+				font-weight: 600;
+			}
+		}
+		&:hover{
+			.pxl-item--image{
+				img{
+					-webkit-transform: scale(1.3);
+					-ms-transform: scale(1.3);
+					transform: scale(1.3);
+
+				}
+				.pxl-item--social{
+					left: 15px;
+				}
+			}
+		}
+	}
+}
+
+.pxl-team-grid2{
+	.pxl-item--inner{
+		-webkit-transition: all 0.3s ease;
+		-o-transition: all 0.3s ease;
+		transition: all 0.3s ease;
+		.pxl-item--image{
+			position: relative;
+			overflow: hidden;
+			border-radius: 3px;
+			@include box-shadow(0 0 27px rgba($primary_color, 0.1));
+			img{
+				width: 100%;
+				height: 100%;
+				-webkit-transition: all 2s ease-out;
+				-o-transition: all 2s ease-out;
+				transition: all 2s ease-out;
+
+
+			}
+			.pxl-item--social{
+				position: absolute;
+				top: 15px;
+				left: -40px;
+				display: grid;
+				-webkit-transition: all 0.3s ease;
+				-o-transition: all 0.3s ease;
+				transition: all 0.3s ease;
+				a{
+					display: block;
+					background-color: $primary_color;
+					font-size: 13px;
+					color: #FFF;
+					width: 40px;
+					height: 40px;
+					line-height: 40px;
+					position: relative;
+					text-align: center;
+					margin-bottom: 8px;
+					
+					i{
+						color: #fff;
+					}
+					&:hover{
+						background-color: $secondary_color;
+					}
+				}
+
+			}
+		}
+		.pxl-item--meta{
+			padding: 25px;
+			text-align: center;
+			.pxl-item--title a{
+				text-transform: capitalize;
+				font-size: 24px;
+				line-height: 1.2;
+				font-weight: 700;
+				color: $secondary_color;
+				margin: 0;
+				@extend .ft-theme-default;
+				&:hover{
+					color: $primary_color;
+				}
+			}
+			.pxl-item--position{
+				display: inline-block;
+				color: $primary_color;
+				margin: 12px 0 0 0;
+				text-transform: capitalize;
+				font-size: 14px;
+				line-height: 1.1;
+				font-weight: 600;
+			}
+		}
+		&:hover{
+			.pxl-item--image{
+				img{
+					-webkit-transform: scale(1.3);
+					-ms-transform: scale(1.3);
+					transform: scale(1.3);
+
+				}
+				.pxl-item--social{
+					left: 15px;
+				}
+			}
+		}
+	}
+}
+
+.pxl-team-carousel3{
+	position: relative;
+	.pxl-carousel-inner .pxl-swiper-container{
+		padding-bottom: 5px;
+	}
+	.pxl-item--inner{
+		@include transition(all 600ms ease);
+		.pxl-item--image{
+			align-items: center;
+			display: flex;
+			flex-wrap: nowrap;
+			flex-direction: column;
+			overflow: hidden;
+			position: relative;
+			img{
+				width: 100%;
+				overflow: hidden;
+				
+			}
+			>a{
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+			}
+			&:before{
+				content: "";
+				background: #fff;
+				@include transition(all 600ms ease);
+				position: absolute;
+				height: 120%;
+				width: 100px;
+				opacity: .2;
+				left: -125%;
+				top: -10%;
+				@include transform(rotate(0deg));
+			}
+			.pxl-item--social{
+				@include transition(all 600ms ease);
+				z-index: 1;
+				background-color: #fff;
+				padding: 10px 15px;
+				border-radius: 4px;
+				box-shadow: 0px 1px 28px 0px rgba(#000, 0.08);
+				position: relative;
+				bottom: 25px;
+				a{
+					padding: 10px;
+				}
+			}
+		}
+		.pxl-item--meta{
+			z-index: 10;
+			background-color: #fff;
+			padding: 0px 20px;
+			.pxl-item--title{
+				font-size: 22px;
+				font-weight: 700;
+				line-height: 1;
+				letter-spacing: -0.02;
+				@extend .ft-theme-default;
+			}
+			.pxl-item--position{
+				font-size: 16px;
+				font-weight: 400;
+				line-height: 1;
+				color: $regular-color;
+				margin:10px 0 17px 0;
+			}
+			.view-detail{
+				font-size: 16px;
+				font-weight: 700;
+				line-height: 42px;
+				color: $secondary_color;
+				padding: 10px 25px;
+				background-color: #fff;
+				border: 1px solid rgba(#132330, 0.1);
+				border-radius: 50px;
+				@extend .ft-theme-default;
+				&:hover{
+					background-color: $primary_color;
+					border-color: $primary_color;
+					color: #fff;
+				}
+			}
+		}
+		&:hover{
+			.pxl-item--image{
+				&:before{
+					left: 130%;
+				}
+			}
+
+			.view-detail{
+				background-color: $primary_color;
+				border-color: $primary_color;
+				color: #fff;
+			}
+		}
+	}
+}

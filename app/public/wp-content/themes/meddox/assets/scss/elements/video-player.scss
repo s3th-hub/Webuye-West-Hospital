@@ -1,0 +1,200 @@
+.pxl-video-player {
+    .btn-video {
+        z-index: 2;
+
+    }
+    .pxl-box--icon {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        bottom: 54px;
+        right: 95px;
+        background-color: #ffde19;
+        border-radius: 100px;
+        text-align: center;
+        font-size: 38px;
+        color: #000010;
+        @media #{$max-lg} {
+            width: 60px;
+            height: 60px;
+            font-size: 24px;
+            bottom: 30px;
+            right: 40px;
+        }
+        i {
+            @extend .pxl-middle;
+        }
+    }
+}
+.pxl-video-player1 {
+    .pxl-shadow-gradient {
+        width: 240px;
+        height: 240px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include transform(translate(-50%, -50%));
+        @include background-horizontal($gradient_color_from, $gradient_color_to);
+        filter: blur(40px);
+        @include border-radius(100%);
+        display: none;
+        @media #{$max-sm} {
+            width: 120px;
+            height: 120px;
+            filter: blur(22px);
+        }
+    }
+    .pxl-video--holder {
+        img, .pxl-video--imagebg {
+
+        }
+        + .btn-video-wrap {
+            &:before{
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                display: block;
+                width: 100%;
+                height: 100%;
+                background-color: $primary_color;
+                border-radius: 50%;
+                animation: pulse-border2 1500ms ease-out infinite;
+                -webkit-animation: pulse-border2 1500ms ease-out infinite;
+                z-index: -2;
+            }
+            border-radius: 50%;
+            width: 55px;
+            height: 55px;
+            background-color: $primary_color;
+            position: absolute;
+            z-index: 99;
+            text-align: center;
+            &.p-center {
+                top: 50%;
+                left: 50%;
+                @include transform(translate(-50%, -50%));
+            }
+        }
+    }
+    .pxl-video-text {
+        font-size: 12px;
+        text-transform: uppercase;
+        color: #fefeff;
+        letter-spacing: 0.05em;
+        font-weight: 700;
+        @extend .ft-theme-default;
+        width: 100%;
+        display: block;
+        margin-top: 24px;
+    }
+    .btn-video {
+        position: relative;
+
+        &.style1 { 
+
+          width: 55px;
+          height: 55px;
+          line-height: 55px;
+          i{
+            font-size: 14px;
+            color: #fff;
+            margin-left: 3px;
+            width: 100%;
+        }
+    }
+}
+.pxl-video--inner {
+    position: relative;
+    overflow: hidden;
+}
+
+}
+
+.pxl-button-video1{
+    &.style1{
+        i{
+            width: 100%;
+        }
+        font-size: 14px !important;
+        color: #fff !important;
+        &:hover{
+         color: #fff !important;
+     }
+ }
+}
+.video-slide-1{
+    transition: all 0.3s ease;
+    position: relative;
+    &:hover{
+        background-color: $secondary_color !important;
+    }
+    &:before{
+       content: "";
+       position: absolute;
+       left: 0;
+       top: 0;
+       display: block;
+       width: 100%;
+       height: 100%;
+       background-color: $primary_color;
+       border-radius: 50%;
+       animation: pulse-border2 1500ms ease-out infinite;
+       -webkit-animation: pulse-border2 1500ms ease-out infinite;
+       z-index: -2;
+   }
+}
+
+.pxl-video-style2 {
+    .btn-video-wrap{
+        width: 100px !important;
+        height: 100px !important;
+        background-color: #fff !important;
+        &:before{
+           background-color: #fff !important;
+       }
+       a{
+        display: block;
+        width: 100%;
+        line-height: 100px;
+        i{
+            color: $primary_color;
+            font-size: 18px;
+        }
+    }
+}
+.introduce{
+    width: 275px;
+    height: 275px;
+    background-color: $fourth_color;
+    border-radius: 50%;
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    .wrap-content{
+        position: absolute;
+        top: 65px;
+        left: 40px;
+        right: 40px;
+        p{
+            color: #fff;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 1;
+            letter-spacing: -0.02;
+            @extend .ft-theme-default;
+            margin: 0;
+        }
+        h3{
+            -webkit-text-stroke: 1px #fff;
+            text-stroke: 4px #fff;
+            font-size: 70px;
+            font-weight: 700;
+            line-height: 1;
+            letter-spacing: 0.5px;
+            margin: 0;
+            color: rgba(#fff, 0);
+        }
+    }
+}
+}

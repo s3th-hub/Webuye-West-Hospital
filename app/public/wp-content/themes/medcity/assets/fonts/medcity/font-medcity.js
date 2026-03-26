@@ -1,0 +1,21 @@
+{
+  "icons": [
+    "medcity-icon-calendar",
+    "medcity-icon-clock",
+    "medcity-icon-heart",
+    "medcity-icon-label",
+    "medcity-icon-mail",
+    "medcity-icon-user",
+    "medcity-icon-widgets",
+    "medcity-icon-facebook",
+    "medcity-icon-twitter",
+    "medcity-icon-youtube",
+    "medcity-icon-phone",
+    "medcity-icon-map",
+    "medcity-icon-check",
+    "medcity-icon-arrow-up",
+    "medcity-icon-arrow-right",
+    "medcity-icon-circle-chevron-right",
+    "medcity-icon-circle-chevron-down"
+  ]
+}

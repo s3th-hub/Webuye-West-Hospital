@@ -1,0 +1,41 @@
+$flaticon_meddox-font: "flaticon_meddox";
+
+@font-face {
+    font-family: $flaticon_meddox-font;
+    src: url("./flaticon_meddox.ttf?27bcdca79e8d22eb2bca0ba5c81ab770") format("truetype"),
+url("./flaticon_meddox.woff?27bcdca79e8d22eb2bca0ba5c81ab770") format("woff"),
+url("./flaticon_meddox.woff2?27bcdca79e8d22eb2bca0ba5c81ab770") format("woff2"),
+url("./flaticon_meddox.eot?27bcdca79e8d22eb2bca0ba5c81ab770#iefix") format("embedded-opentype"),
+url("./flaticon_meddox.svg?27bcdca79e8d22eb2bca0ba5c81ab770#flaticon_meddox") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon_meddox !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon_meddox-map: (
+    "arrow": "\f101",
+    "plus": "\f102",
+    "right-up": "\f103",
+    "search": "\f104",
+);
+
+.flaticon-arrow:before {
+    content: map-get($flaticon_meddox-map, "arrow");
+}
+.flaticon-plus:before {
+    content: map-get($flaticon_meddox-map, "plus");
+}
+.flaticon-right-up:before {
+    content: map-get($flaticon_meddox-map, "right-up");
+}
+.flaticon-search:before {
+    content: map-get($flaticon_meddox-map, "search");
+}

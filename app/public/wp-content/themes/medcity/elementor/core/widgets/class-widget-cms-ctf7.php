@@ -1,0 +1,11 @@
+<?php
+
+class ETC_CmsCtf7_Widget extends Elementor_Theme_Core_Widget_Base{
+    protected $name = 'cms_ctf7';
+    protected $title = 'Contact Form 7';
+    protected $icon = 'eicon-form-horizontal';
+    protected $categories = array( 'elementor-theme-core' );
+    protected $params = '{"sections":[{"name":"layout_section","label":"Source Settings","tab":"layout","controls":[{"name":"layout","label":"Layout","type":"layoutcontrol","options":{"1":{"label":"Layout 1","image":"http:\/\/localhost:8888\/medcity\/wp-content\/themes\/medcity\/elementor\/templates\/widgets\/cms_ctf7\/layout\/1.webp"},"2":{"label":"Layout 2","image":"http:\/\/localhost:8888\/medcity\/wp-content\/themes\/medcity\/elementor\/templates\/widgets\/cms_ctf7\/layout\/2.webp"}},"default":"1"}]},{"name":"source_section","label":"Source Settings","tab":"content","controls":[{"name":"ctf7_title","label":"Title","type":"text","label_block":true,"condition":{"layout":["2"]}},{"name":"ctf7_description","label":"Description","type":"textarea","label_block":true,"rows":6,"condition":{"layout":["2"]}},{"name":"ctf7_id","label":"Select Form","type":"select","options":{"13959":"Book Appointment - Home 8","10452":"Book Appointment 2","8871":"Book Appointment 3","6512":"Contact Form Contact","6212":"Case Contact Secondary","5715":"Book Appointment"},"label_block":true}]},{"name":"textarea_size","label":"Input Style","tab":"style","controls":[{"name":"message_height","type":"slider","label":"Textarea Height","size_units":["px"],"range":{"px":{"min":120,"max":350}},"default":{"unit":"px","size":""},"selectors":{"{{WRAPPER}} .wpcf7-form textarea.wpcf7-textarea":"height: {{SIZE}}{{UNIT}};"}},{"name":"input_border_radius","label":"Input Border Radius","type":"dimensions","size_units":["px","%"],"selectors":{"{{WRAPPER}} .wpcf7-form .wpcf7-form-control":"border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;","{{WRAPPER}} .wpcf7-form .wpcf7-submit":"border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important ;"},"condition":{"layout":["1"]}}]}]}';
+    protected $styles = array(  );
+    protected $scripts = array(  );
+}

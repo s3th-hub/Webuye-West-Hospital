@@ -1,0 +1,78 @@
+@font-face {
+  font-family: 'medcity';
+  src:  url('fonts/medcity.eot?k78pi7');
+  src:  url('fonts/medcity.eot?k78pi7#iefix') format('embedded-opentype'),
+    url('fonts/medcity.ttf?k78pi7') format('truetype'),
+    url('fonts/medcity.woff?k78pi7') format('woff'),
+    url('fonts/medcity.svg?k78pi7#medcity') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="medcity-icon-"], [class*=" medcity-icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'medcity' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.medcity-icon-calendar:before {
+  content: "\e900";
+}
+.medcity-icon-clock:before {
+  content: "\e901";
+}
+.medcity-icon-heart:before {
+  content: "\e902";
+}
+.medcity-icon-label:before {
+  content: "\e903";
+}
+.medcity-icon-mail:before {
+  content: "\e904";
+}
+.medcity-icon-user:before {
+  content: "\e905";
+}
+.medcity-icon-widgets:before {
+  content: "\e906";
+}
+.medcity-icon-facebook:before {
+  content: "\e907";
+}
+.medcity-icon-twitter:before {
+  content: "\e908";
+}
+.medcity-icon-youtube:before {
+  content: "\e909";
+}
+.medcity-icon-phone:before {
+  content: "\e90a";
+}
+.medcity-icon-map:before {
+  content: "\e90b";
+}
+.medcity-icon-check:before {
+  content: "\e90c";
+}
+.medcity-icon-arrow-up:before {
+  content: "\e90d";
+}
+.medcity-icon-arrow-right:before {
+  content: "\e90e";
+}
+.medcity-icon-circle-chevron-right:before {
+  content: "\e90f";
+}
+.medcity-icon-circle-chevron-down:before {
+  content: "\e910";
+}
